@@ -1,0 +1,23 @@
+Source: php-net-ldap2
+Section: php
+Priority: optional
+Maintainer: Benjamin Renard <brenard@easter-eggs.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: http://pear.php.net/package/Net_LDAP2/
+Vcs-Git: https://github.com/brenard/Net_LDAP2.git
+Vcs-Browser: https://github.com/brenard/Net_LDAP2
+
+Package: php-net-ldap2
+Architecture: all
+Depends: php-pear, php-common, php-ldap
+Description: Object oriented interface for searching and manipulating LDAP-entries
+ Net_LDAP2 is the successor of Net_LDAP which is a clone of Perls Net::LDAP
+ object interface to directory servers. It does contain most of Net::LDAPs
+ features but has some own too.
+  With Net_LDAP2 you have:
+  * A simple object-oriented interface to connections, searches entries and filters.
+  * Support for TLS and LDAP v3.
+  * Simple modification, deletion and creation of LDAP entries.
+  * Support for schema handling.
+  Net_LDAP2 layers itself on top of PHP's existing ldap extensions.

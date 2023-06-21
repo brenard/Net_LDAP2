@@ -1,3 +1,10 @@
+php-net-ldap2 (2.2.1-1) unstable; urgency=medium
+
+  * Don't force deleterdn in Net_LDAP2_Entry->update() and Net_LDAP2->move()
+  * fix: remove unused $ber property
+
+ -- Benjamin Renard <brenard@easter-eggs.com>  Wed, 21 Jun 2023 17:14:43 +0200
+
 php-net-ldap2 (2.2.0-4) unstable; urgency=medium
 
   * Net_LDAP2_Util :: canonical_dn : Fix escaping slashing slashes

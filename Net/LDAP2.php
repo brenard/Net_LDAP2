@@ -21,15 +21,15 @@
 * Package includes.
 */
 require_once 'PEAR.php';
-require_once 'Net/LDAP2/RootDSE.php';
-require_once 'Net/LDAP2/Schema.php';
-require_once 'Net/LDAP2/Entry.php';
-require_once 'Net/LDAP2/Search.php';
-require_once 'Net/LDAP2/Util.php';
-require_once 'Net/LDAP2/Filter.php';
-require_once 'Net/LDAP2/LDIF.php';
-require_once 'Net/LDAP2/SchemaCache.interface.php';
-require_once 'Net/LDAP2/SimpleFileSchemaCache.php';
+require_once __DIR__.'/LDAP2/RootDSE.php';
+require_once __DIR__.'/LDAP2/Schema.php';
+require_once __DIR__.'/LDAP2/Entry.php';
+require_once __DIR__.'/LDAP2/Search.php';
+require_once __DIR__.'/LDAP2/Util.php';
+require_once __DIR__.'/LDAP2/Filter.php';
+require_once __DIR__.'/LDAP2/LDIF.php';
+require_once __DIR__.'/LDAP2/SchemaCache.interface.php';
+require_once __DIR__.'/LDAP2/SimpleFileSchemaCache.php';
 
 /**
 *  Error constants for errors that are not LDAP errors.

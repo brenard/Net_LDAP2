@@ -182,6 +182,7 @@ class Net_LDAP2_Search extends PEAR implements Iterator
     */
     public function shiftEntry()
     {
+        if (!$this->_search) return false;
         if (is_null($this->_entry)) {
             if(!$this->_entry = @ldap_first_entry($this->_link, $this->_search)) {
                 $false = false;

@@ -698,7 +698,9 @@ class Net_LDAP2 extends PEAR
     */
     public function _Net_LDAP2()
     {
-        @ldap_close($this->_link);
+        if ($this->_link !== false) {
+            @ldap_close($this->_link);
+        }
     }
 
     /**

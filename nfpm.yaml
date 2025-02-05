@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://nfpm.goreleaser.com/static/schema.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj
+
+name: "ee-php-net-ldap2"
+arch: "all"
+platform: "linux"
+version: "2.2.1-10~ee1"
+section: "php"
+priority: "optional"
+depends:
+  - php-pear
+  - php-common
+  - php-ldap
+provides:
+  - php-net-ldap2
+conflicts:
+  - php-net-ldap2
+maintainer: "Benjamin Renard <brenard@easter-eggs.com>"
+description: >
+  Net_LDAP2 is the successor of Net_LDAP which is a clone of Perls Net::LDAP
+  object interface to directory servers. It does contain most of Net::LDAPs
+  features but has some own too.
+  With Net_LDAP2 you have:
+   * A simple object-oriented interface to connections, searches entries and filters.
+   * Support for TLS and LDAP v3.
+   * Simple modification, deletion and creation of LDAP entries.
+   * Support for schema handling.
+   Net_LDAP2 layers itself on top of PHP's existing ldap extensions
+
+  This package contains a patched version of Net_LDAP2 PEAR package for latest Debian
+  PHP support.
+
+vendor: "Easter-eggs"
+homepage: "https://github.com/brenard/Net_LDAP2/tree/fix-all"
+license: "GPL-3"
+# Changelog YAML file, see: https://github.com/goreleaser/chglog
+changelog: "dist/changelog.yml"
+contents:
+  - src: ./Net
+    dst: /usr/share/php/Net

@@ -698,7 +698,10 @@ class Net_LDAP2 extends PEAR
     */
     public function _Net_LDAP2()
     {
-        @ldap_close($this->_link);
+        if ($this->_link) {
+            ldap_close($this->_link);
+            $this->_link = false;
+        }
     }
 
     /**
@@ -1745,7 +1748,7 @@ class Net_LDAP2 extends PEAR
     * auto_reconnect has been turned on (see the _config array documentation).
     *
     * @access public
-    * @return resource|\LDAP\Connection LDAP link (resource on PHP < 8.1)
+    * @return resource|\LDAP\Connection|false LDAP link (resource on PHP < 8.1), False if not connected
     */
     public function getLink()
     {

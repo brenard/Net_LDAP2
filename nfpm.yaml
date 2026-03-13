@@ -4,7 +4,7 @@
 name: "ee-php-net-ldap2"
 arch: "all"
 platform: "linux"
-version: "2.2.1-10~ee1"
+version: "2.2.1-11~ee1"
 section: "php"
 priority: "optional"
 depends:
